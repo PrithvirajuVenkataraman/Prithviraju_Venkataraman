@@ -1,0 +1,8 @@
+<!-- prithvi_final/contacts/templates/contacts/contact_edit.html -->
+
+<h1>Edit Contact</h1>
+<form method="POST" class="contact-form">{% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+<a href="{% url 'contact_list' %}">Cancel</a>
