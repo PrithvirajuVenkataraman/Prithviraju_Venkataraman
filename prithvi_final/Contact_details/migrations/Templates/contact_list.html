@@ -1,7 +1,0 @@
-<!-- prithvi_final/contacts/templates/contacts/contact_list.html -->
-
-{% for contact in contacts %}
-  <p>{{ contact.name }} - {{ contact.email }} <a href="{% url 'contact_detail' pk=contact.pk %}">Detail</a></p>
-{% endfor %}
-
-<a href="{% url 'contact_new' %}">Create New Contact</a>
