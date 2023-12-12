@@ -1,0 +1,11 @@
+<!-- contact_details/templates/contact_details/contact_form.html -->
+{% extends 'contact_details/base.html' %}
+{% block content %}
+  <h1>Contact Form</h1>
+  <form method="post" action="{% url 'contact_form' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save Contact</button>
+  </form>
+  <a href="{% url 'contact_list' %}" class="btn btn-secondary">Cancel</a>
+{% endblock %}

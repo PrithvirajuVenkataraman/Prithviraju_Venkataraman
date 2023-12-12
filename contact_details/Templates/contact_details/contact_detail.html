@@ -1,0 +1,10 @@
+<!-- contact_details/templates/contact_details/contact_detail.html -->
+{% extends 'contact_details/base.html' %}
+{% block content %}
+  <h1>Contact Details</h1>
+  <p>Name: {{ contact.name }}</p>
+  <p>Email: {{ contact.email }}</p>
+  <p>Phone Number: {{ contact.phone_number }}</p>
+  <a href="{% url 'contact_edit' pk=contact.pk %}" class="btn btn-warning">Edit</a>
+  <a href="{% url 'contact_list' %}" class="btn btn-secondary">Back to List</a>
+{% endblock %}
