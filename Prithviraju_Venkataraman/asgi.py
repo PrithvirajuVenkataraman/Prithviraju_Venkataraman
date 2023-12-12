@@ -1,5 +1,5 @@
 """
-ASGI config for Prithviraju_Venkataraman project.
+ASGI config for Prithviraju_venkataraman project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Prithviraju_Venkataraman.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Prithviraju_venkataraman.settings')
 
 application = get_asgi_application()
