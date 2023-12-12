@@ -9,3 +9,10 @@
   </form>
   <a href="{% url 'contact_list' %}" class="btn btn-secondary">Cancel</a>
 {% endblock %}
+<form method="post" action="{% url 'contact_form' %}">
+  {% csrf_token %}
+  {{ form.name }}
+  {{ form.email }}
+  {{ form.phone_number }}
+  <button type="submit" class="btn btn-primary">Save Contact</button>
+</form>

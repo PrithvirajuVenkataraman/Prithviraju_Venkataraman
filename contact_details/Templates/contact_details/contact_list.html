@@ -1,6 +1,7 @@
 {% extends 'contact_details/base.html' %}
 {% block content %}
   <h1>Contact List</h1>
+  <a href="{% url 'contact_create' %}" class="btn btn-success btn-sm">Add Contact</a>
   <ul>
     {% for contact in contacts %}
       <li>

@@ -1,8 +1,12 @@
-# contact_details/forms.py
 from django import forms
 from .models import Contact
 
 class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'phone_number']
+
+class UpdateContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ['name', 'email', 'phone_number']
