@@ -1,0 +1,9 @@
+{% extends 'yourapp/base.html' %}
+{% block content %}
+  <h1>Create a New Contact</h1>
+  <form method="post" action="{% url 'contact_create' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+{% endblock %}
