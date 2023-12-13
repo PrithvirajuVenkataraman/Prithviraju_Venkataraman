@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a Contact</title>
+</head>
+<body>
+    <h1>Create a Contact</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Create Contact</button>
+    </form>
+    <a href="{% url 'contact_management' %}">Back to Contact List</a>
+</body>
+</html>
